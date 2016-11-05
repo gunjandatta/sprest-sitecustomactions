@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package dslVersion="1.0.0.0" 
+        Id="d2088a97-77a3-469d-8559-e60acb46ae8e" 
+        solutionId="d2088a97-77a3-469d-8559-e60acb46ae8e" 
+        xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel" 
+        name="GD.SPREST.SiteCustomActions"
+        sharePointProductVersion="15.0">
+  <features>
+        <featureReference itemId="78479893-e7a6-4c7b-96cb-d8b2fc592a4f" />
+  </features>
+</package>

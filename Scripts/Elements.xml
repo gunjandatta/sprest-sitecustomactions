@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="Scripts">
+    <File Path="Scripts\App.js" Url="Scripts/App.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\App.ts" Url="Scripts/App.ts" ReplaceContent="TRUE" />
+    <File Path="Scripts\App.js.map" Url="Scripts/App.js.map" ReplaceContent="TRUE" />
+    <File Path="Scripts\sprest.min.js" Url="Scripts/sprest.min.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\banner.ts" Url="Scripts/banner.ts" ReplaceContent="TRUE" />
+    <File Path="Scripts\banner.js.map" Url="Scripts/banner.js.map" ReplaceContent="TRUE" />
+    <File Path="Scripts\banner.js" Url="Scripts/banner.js" ReplaceContent="TRUE" />
+  </Module>
+</Elements>

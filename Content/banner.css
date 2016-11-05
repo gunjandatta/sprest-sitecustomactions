@@ -1,0 +1,7 @@
+﻿/* Place custom styles below */
+#myBanner {
+    background-color: green;
+    color: white;
+    height: 50px;
+    width: 100%;
+}
