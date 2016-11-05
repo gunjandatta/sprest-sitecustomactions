@@ -12,14 +12,20 @@ var GD;
             // Parse the css files
             for (var _i = 0, _a = this._cssFiles; _i < _a.length; _i++) {
                 var caInfo = _a[_i];
+                var existsFl = false;
                 // Parse the custom actions
                 for (var _b = 0, _c = this._caList; _b < _c.length; _b++) {
                     var ca = _c[_b];
                     // Ensure this custom action exists
                     if (ca.Name == caInfo.Name) {
-                        // Skip this custom action
-                        continue;
+                        // Set the flag
+                        existsFl = true;
+                        break;
                     }
+                }
+                // See if we need to add this custom action
+                if (existsFl) {
+                    continue;
                 }
                 // Add the custom action
                 customActions.add({
@@ -33,14 +39,20 @@ var GD;
             // Parse the js files
             for (var _d = 0, _e = this._jsFiles; _d < _e.length; _d++) {
                 var caInfo = _e[_d];
+                var existsFl = false;
                 // Parse the custom actions
                 for (var _f = 0, _g = this._caList; _f < _g.length; _f++) {
                     var ca = _g[_f];
                     // Ensure this custom action exists
                     if (ca.Name == caInfo.Name) {
-                        // Skip this custom action
-                        continue;
+                        // Set the flag
+                        existsFl = true;
+                        break;
                     }
+                }
+                // See if we need to add this custom action
+                if (existsFl) {
+                    continue;
                 }
                 // Add the custom action
                 customActions.add({

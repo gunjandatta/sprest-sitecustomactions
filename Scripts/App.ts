@@ -25,14 +25,20 @@ module GD {
 
             // Parse the css files
             for (let caInfo of this._cssFiles) {
+                let existsFl = false;
+
                 // Parse the custom actions
                 for (let ca of this._caList) {
                     // Ensure this custom action exists
                     if (ca.Name == caInfo.Name) {
-                        // Skip this custom action
-                        continue;
+                        // Set the flag
+                        existsFl = true;
+                        break;
                     }
                 }
+
+                // See if we need to add this custom action
+                if (existsFl) { continue; }
 
                 // Add the custom action
                 customActions.add({
@@ -46,14 +52,20 @@ module GD {
 
             // Parse the js files
             for (let caInfo of this._jsFiles) {
+                let existsFl = false;
+
                 // Parse the custom actions
                 for (let ca of this._caList) {
                     // Ensure this custom action exists
                     if (ca.Name == caInfo.Name) {
-                        // Skip this custom action
-                        continue;
+                        // Set the flag
+                        existsFl = true;
+                        break;
                     }
                 }
+
+                // See if we need to add this custom action
+                if (existsFl) { continue; }
 
                 // Add the custom action
                 customActions.add({
