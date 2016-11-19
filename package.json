@@ -1,8 +1,11 @@
 {
-	"version": "1.0.0",
-	"name": "sprest-sitecustomactions",
-	"private": true,
+  "version": "1.0.0",
+  "name": "sprest-sitecustomactions",
+  "private": true,
   "devDependencies": {
     "gd-sprest": "*"
+  },
+  "dependencies": {
+    "gd-sprest": "^0.9.1"
   }
 }

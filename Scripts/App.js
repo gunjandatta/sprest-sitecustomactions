@@ -34,7 +34,7 @@ var GD;
                     Name: caInfo.Name,
                     Sequence: caInfo.Sequence ? caInfo.Sequence : 100,
                     ScriptBlock: "var link=document.createElement('link'); link.rel='stylesheet'; link.type='text/css'; link.href='" + window["_spPageContextInfo"].webAbsoluteUrl + "/" + caInfo.Url + "'; document.head.appendChild(link);"
-                }).next();
+                }).execute();
             }
             // Parse the js files
             for (var _d = 0, _e = this._jsFiles; _d < _e.length; _d++) {
@@ -61,10 +61,10 @@ var GD;
                     Name: caInfo.Name,
                     Sequence: caInfo.Sequence ? caInfo.Sequence : 100,
                     ScriptBlock: "var script=document.createElement('script'); script.src='" + window["_spPageContextInfo"].webAbsoluteUrl + "/" + caInfo.Url + "'; document.head.appendChild(script);"
-                }).next();
+                }).execute();
             }
-            // Execute the request
-            customActions.execute(function () {
+            // Wait for the requests to complete
+            customActions.done(function () {
                 // Refresh the page
                 document.location.reload();
             });
@@ -95,7 +95,7 @@ var GD;
                         customActions
                             .getById(ca.Id)
                             .delete()
-                            .next();
+                            .execute();
                         // Break from the loop
                         break;
                     }
@@ -112,14 +112,14 @@ var GD;
                         customActions
                             .getById(ca.Id)
                             .delete()
-                            .next();
+                            .execute();
                         // Break from the loop
                         break;
                     }
                 }
             }
-            // Execute the request
-            customActions.execute(function () {
+            // Wait for the requests to complete
+            customActions.done(function () {
                 // Refresh the page
                 document.location.reload();
             });

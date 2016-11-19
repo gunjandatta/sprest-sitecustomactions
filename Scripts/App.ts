@@ -47,7 +47,7 @@ module GD {
                     Name: caInfo.Name,
                     Sequence: caInfo.Sequence ? caInfo.Sequence : 100,
                     ScriptBlock: "var link=document.createElement('link'); link.rel='stylesheet'; link.type='text/css'; link.href='" + window["_spPageContextInfo"].webAbsoluteUrl + "/" + caInfo.Url + "'; document.head.appendChild(link);"
-                }).next();
+                }).execute();
             }
 
             // Parse the js files
@@ -74,11 +74,11 @@ module GD {
                     Name: caInfo.Name,
                     Sequence: caInfo.Sequence ? caInfo.Sequence : 100,
                     ScriptBlock: "var script=document.createElement('script'); script.src='" + window["_spPageContextInfo"].webAbsoluteUrl + "/" + caInfo.Url + "'; document.head.appendChild(script);"
-                }).next();
+                }).execute();
             }
 
-            // Execute the request
-            customActions.execute(() => {
+            // Wait for the requests to complete
+            customActions.done(() => {
                 // Refresh the page
                 document.location.reload();
             });
@@ -116,7 +116,7 @@ module GD {
                             // Delete it
                             .delete()
                             // Execute the request
-                            .next();
+                            .execute();
 
                         // Break from the loop
                         break;
@@ -136,7 +136,7 @@ module GD {
                             // Delete it
                             .delete()
                             // Execute the request
-                            .next();
+                            .execute();
 
                         // Break from the loop
                         break;
@@ -144,8 +144,8 @@ module GD {
                 }
             }
 
-            // Execute the request
-            customActions.execute(() => {
+            // Wait for the requests to complete
+            customActions.done(() => {
                 // Refresh the page
                 document.location.reload();
             });
